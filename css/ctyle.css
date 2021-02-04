@@ -183,6 +183,21 @@ btn_about-company {
   border-radius: 2px;
 }
 
+/* Breadcrumbs */
+.breadcrumbs {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.breadcrumbs a {
+  font: inherit;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
 /* page-header */
 
 .header-top {
@@ -282,7 +297,8 @@ h1 {
 
 /* login */
 
-.user {
+.user,
+.user-name {
   font-size: 21px;
   line-height: 21px;
 }
@@ -307,6 +323,35 @@ h1 {
 
 .registration-link {
   padding: 12px 24px 12px 24px;
+}
+
+/* catalog
+user */
+
+.user-name {
+  box-sizing: border-box;
+  display: block;
+  width: 299px;
+  height: 45px;
+  padding: 12px 0;
+  text-align: center;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.user__links a,
+.user__links span {
+  color: var(--purple-blue);
+}
+
+.user__links a:hover,
+.user__links span:hover {
+  color: var(--basic-red);
+}
+
+.user__links a:active,
+.user__links span:active {
+  color: var(--basic-greylight);
 }
 
 /* header-nav */
@@ -402,6 +447,7 @@ h1 {
 .popular-products__title h2 {
   font-size: 30px;
   line-height: 30px;
+  color: var(--purple-blue);
   text-transform: uppercase;
 }
 
@@ -451,6 +497,7 @@ h1 {
 .popular-producers__title h2 {
   font-size: 30px;
   line-height: 30px;
+  color: var(--purple-blue);
   text-transform: uppercase;
 }
 

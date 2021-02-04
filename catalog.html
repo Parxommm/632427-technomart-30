@@ -13,7 +13,7 @@
     <link href="css/ctyle.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="page-body inner-page">
     <header class="page-header">
       <div class="header-top">
         <div class="container">
@@ -35,14 +35,11 @@
           </div>
           <div class="login">
             <a class="user-name" href="#">Равшан Джамшутович</a>
-            <ul>
-              <li>
-                <a class="orders-link" href="#">Мои заказы</a>
-              </li>
-              <li>
-                <a class="account-link" href="#">Личный кабинет</a>
-              </li>
-            </ul>
+            <div class="user__links">
+              <a class="orders-link" href="#">Мои заказы</a>
+              <span>&#8226;</span>
+              <a class="account-link" href="#">Личный кабинет</a>
+            </div>
           </div>
         </div>
       </div>
@@ -73,13 +70,13 @@
           <li>
             <a href="#">Инструмент</a>
           </li>
-          <li>
-            <p>Перфораторы</p>
+          <li class="breadcrumbs-current">
+            Перфораторы
           </li>
         </ul>
       </div>
       <div class="container">
-        <h2>Перфораторы</h2>
+        <h2 class="category-title">Перфораторы</h2>
         <section class="filters">
           <h3 class="hidden">Фильтр товаров</h3>
           <p>Фильтр</p>
