@@ -18,8 +18,8 @@
       <div class="header__top">
         <div class="container">
           <a class="header__logo logo">ТЕХНОМАРТ</a>
-          <form class="search-form" action="#" method="POST">
-            <input class="search-form__input" type="search" placeholder="Поиск:">
+          <form class="header__search" action="#" method="POST">
+            <input class="header__search-input" type="search" placeholder="Поиск:">
           </form>
           <div class="header__top-links">
             <a class="header__top-link" href="#">Закладки: 0</a>
@@ -29,9 +29,13 @@
         </div>
       </div>
       <div class="header__bottom">
-        <div class="header__bottom-info">
-          <div class="container">
-            <h1 class="header__title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+        <div class="container">
+          <div class="header__bottom-info">
+            <h1 class="header__title">
+              Интернет-магазин<br>
+              строительных материалов<br>
+              и инструментов для ремонта
+            </h1>
             <div>
               <a class="header__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
               <p class="header__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -92,8 +96,7 @@
             Перфораторы
           </li>
         </ul>
-      </div>
-      <div class="container">
+
         <h2 class="category__title">Перфораторы</h2>
         <section class="filters">
           <h3 class="hidden">Фильтр товаров</h3>
@@ -179,7 +182,7 @@
               </li>
             </ul>
           </div>
-          <ul class="catalog__list-sorted">
+          <ul class="product__list-sorted">
             <li class="product__item">
               <img class="product__item-img" src="img/products/BOSCH-BFG-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
               <div class="product__item-hover hidden">
@@ -286,17 +289,16 @@
             </li>
           </ul>
         </section>
-      </div>
-      <section class="about-category">
-        <div class="container">
+
+        <section class="about-category">
           <h2 class="about-category__title">ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
           <p class="about-category__text">
             Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
             Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
             В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
           </p>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
 
     <footer class="footer">
@@ -351,13 +353,13 @@
               <a class="footer__social-link footer__social-link--insta" href="#">insta</a>
             </li>
           </ul>
-          <p>
+          <p class="footer__email">
             Обратная связь:<br>
-            <a class="footer__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a class="footer__email-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
-          <p>
+          <p class="footer__developer">
             Разработано —<br>
-            <a class="footer__developer" href="htmlacademy.ru">htmlacademy.ru</a>
+            <a class="footer__developer-link" href="htmlacademy.ru">htmlacademy.ru</a>
           </p>
         </div>
       </div>
