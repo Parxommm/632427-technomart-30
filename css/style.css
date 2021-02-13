@@ -103,6 +103,19 @@ img {
   padding: 0 10px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Button */
 
 .btn {
@@ -146,6 +159,7 @@ img {
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-white);
+  padding-left: 42px;
   background-color: var(--night-blue);
   border: none;
 }
@@ -184,10 +198,19 @@ img {
   display: inline-block;
   width: 150px;
   background-color: var(--basic-green);
+  margin-left: 26px;
 }
 
 .header__top-link--order:hover {
   background-color: var(--success);
+}
+
+.header__top-link--cart {
+  margin-left: 73px;
+}
+
+.header__top-link--bookmarks {
+  margin-left: 25px;
 }
 
 /* header___bottom */
@@ -199,6 +222,8 @@ img {
 .header__bottom-info {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 158px;
+  gap: 20px;
 }
 
 .header__title {
@@ -206,6 +231,15 @@ img {
   line-height: 23px;
   font-style: italic;
   color: var(--basic-red);
+  margin: 0;
+  padding-left: 30px;
+  padding-top: 43px;
+  padding-bottom: 44px;
+}
+
+.header__contacts {
+  padding-top: 46px;
+  padding-bottom: 3px;
 }
 
 .header__phone {
@@ -222,14 +256,21 @@ img {
   font-size: 14px;
   line-height: 24px;
   color: var(--purple-blue);
+  margin: 0;
 }
 
 /* header__login */
+
+.header__login {
+  justify-self: end;
+  padding-top: 46px;
+}
 
 .header__login-link {
   display: inline-block;
   font-size: 21px;
   line-height: 21px;
+  margin-left: 9px;
   color: var(--basic-black);
   background-color: var(--basic-white);
 }
@@ -418,23 +459,52 @@ img {
 }
 
 .product__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
   width: 220px;
-  height: 318px;
+  min-height: 318px;
+  padding-bottom: 21px;
   box-sizing: border-box;
   border: 1px solid #EAEAEA;
 }
 
+.product__item:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product__item:hover .product__item-hover {
+  display: block;
+}
+
+.product__item:hover .product__item-img {
+  display: none;
+}
+
+.product__item-img {
+  margin: auto 0;
+}
+
 .product__item-name {
+  width: 157px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 18px;
   line-height: 20px;
   font-weight: 700;
+  text-align: center;
+  margin-bottom: 7px;
+  margin-top: 0px;
 }
 
 .product__item-price {
+  justify-self: end;
+
   display: block;
   width: 141px;
   padding: 10px 0;
+  margin-top: 13px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -454,9 +524,16 @@ img {
 
 /* Hover btn (buy, bookmarks) */
 
+.product__item-hover {
+  display: none;
+  margin-top: 38px;
+  margin-bottom: auto;
+}
+
 .btn--buy {
   width: 135px;
   padding: 10px 0;
+  margin-bottom: 10px;
   background-color: var(--basic-green);
   box-shadow: inset 0px -3px 0px #367315;
 }
@@ -497,6 +574,10 @@ img {
   justify-content: space-between;
 
   background-color: var(--beige);
+}
+
+.producer__item:hover {
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 .popular-producers__title h2 {
@@ -731,7 +812,6 @@ Breadcrumbs */
 
   display: flex;
   justify-content: flex-start;
-  gap: 40px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -740,6 +820,10 @@ Breadcrumbs */
   padding: 0;
   margin: 0;
   text-transform: uppercase;
+}
+
+.breadcrumbs__item {
+  margin-right: 40px;
 }
 
 .breadcrumbs__link {
@@ -769,6 +853,7 @@ filter */
 
   font-family: "PT Sans", Arial, sans-serif;
   text-transform: uppercase;
+  width: 220px;
 }
 
 .filters__text {
@@ -776,17 +861,54 @@ filter */
   line-height: 18px;
   margin: 0;
   padding: 10px 0 10px 15px;
+  background-color: #F7F3EC;
 }
 
-.filters__text,
-.filter__input-price {
-  background-color: #F7F3EC;
+.filter__group {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 40px;
+  border: none;
 }
 
 .filter__group-name {
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
+}
+
+.filter__group-name--price {
+  margin-bottom: 11px;
+}
+
+.filter__group-name--producer {
+  margin-bottom: 18px;
+}
+
+.filter__group-name--power-supply {
+  margin-bottom: 23px;
+}
+
+.filter__price-range {
+  width: 220px;
+  height: 80px;
+  margin-bottom: 9px;
+  background-color: #F7F3EC;
+}
+
+.filter__price-min-max {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter__input-price {
+  width: 95px;
+  height: 38px;
+  background-color: #F7F3EC;
+  text-align: center;
+  padding: 0;
+  border: none;
 }
 
 .filter__list {
@@ -796,6 +918,15 @@ filter */
   padding: 0;
   margin: 0;
 }
+
+.filter__list-item {
+  margin-bottom: 20px;
+}
+
+.filter__list-item:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
 
 .btn--filter {
   font-size: 13px;
@@ -843,11 +974,14 @@ sort */
 .catalog__sort-list {
   display: inline-flex;
   justify-content: flex-end;
-  gap: 50px;
 
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.catalog__sort-item {
+  margin-left: 40px;
 }
 
 .catalog__sort-link {
@@ -876,7 +1010,12 @@ sort */
 pagination*/
 
 .pagination {
+  display: flex;
+  flex-wrap: wrap;
+
   list-style: none;
+  margin: 48px 0 0 0;
+  padding: 0;
   text-transform: uppercase;
 }
 
@@ -887,6 +1026,7 @@ pagination*/
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-right: 10px;
   border: 1px solid var(--basic-black);
   border-radius: 2px;
 }
@@ -917,8 +1057,6 @@ pagination*/
 about_hammer-drill */
 
 .about-category {
-  grid-column: 1 / -1;
-
   background-color: var(--basic-gray);
 }
 
@@ -955,11 +1093,18 @@ about_hammer-drill */
 .footer__nav {
   display: flex;
   justify-content: flex-end;
-  gap: 58px;
 
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.footer__nav-item {
+  margin-left: 58px;
+}
+
+.footer__nav-item:nth-child(1) {
+  margin-left: 0;
 }
 
 .footer__nav-link:hover {
