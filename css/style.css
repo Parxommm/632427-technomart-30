@@ -147,7 +147,7 @@ img {
   background-color: var(--basic-red);
   background-image: url("../img/logo/logo-technomart.svg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 56px 12px;
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
 
@@ -179,14 +179,18 @@ img {
 /* Header__top links */
 
 .header__top-links {
+  display: flex;
   justify-self: end;
+  height: 42px;
 }
 
 .header__top-link {
+  display: block;
+  box-sizing: border-box;
   font-size: 18px;
   line-height: 24px;
   text-align: center;
-  padding: 9px 0 9px 0;
+  padding-top: 10px;
   color: var(--basic-white);
 }
 
@@ -195,10 +199,11 @@ img {
 }
 
 .header__top-link--order {
-  display: inline-block;
   width: 150px;
+  height: 42px;
+  margin-left: 27px;
   background-color: var(--basic-green);
-  margin-left: 26px;
+
 }
 
 .header__top-link--order:hover {
@@ -206,40 +211,41 @@ img {
 }
 
 .header__top-link--cart {
-  margin-left: 73px;
+  padding-left: 23px;
+  margin-left: 45px
 }
 
 .header__top-link--bookmarks {
-  margin-left: 25px;
+  padding-left: 23px;
 }
 
 /* header___bottom */
 
 .header__bottom {
+  height: 278px;
+  box-sizing: border-box;
   background-color: var(--basic-gray);
-  padding-bottom: 54px;
+  padding-bottom: 60px;
 }
 
 .header__bottom-info {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 158px;
   gap: 20px;
+
+  height: 158px;
+  padding-top: 46px;
+  box-sizing: border-box;
 }
 
 .header__title {
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
+  font-weight: 400;
   color: var(--basic-red);
   margin: 0;
   padding-left: 30px;
-  padding-top: 43px;
-  padding-bottom: 44px;
-}
-
-.header__contacts {
-  padding-top: 46px;
 }
 
 .header__phone {
@@ -256,23 +262,25 @@ img {
   font-size: 14px;
   line-height: 24px;
   color: var(--purple-blue);
-  margin: 3px 0 0 0;
+  margin: 3px 0 0 10px;
 }
 
 /* header__login */
 
 .header__login {
   justify-self: end;
-  padding-top: 46px;
 }
 
 .header__login-link {
   display: inline-block;
   font-size: 21px;
   line-height: 21px;
-  margin-left: 9px;
   color: var(--basic-black);
   background-color: var(--basic-white);
+}
+
+.header__login-link--reg {
+  margin-left: 9px;
 }
 
 .header__login-link:hover {
@@ -295,7 +303,6 @@ img {
 
 .header__nav-list {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
 
   list-style: none;
@@ -342,8 +349,14 @@ img {
 }
 
 .categories__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   width: 300px;
   height: 123px;
+  box-sizing: border-box;
+  padding: 20px 23px 21px 23px;
 }
 
 .categories__item-title {
@@ -352,7 +365,7 @@ img {
   font-weight: 700;
   color: var(--basic-white);
   padding: 0;
-  margin: 20px 0 14px 23px;
+  margin: 0;
 }
 
 .categories__item--materials {
@@ -382,7 +395,6 @@ img {
   background-color: var(--basic-white_30);
   width: 135px;
   padding: 10px 0 10px 0;
-  margin-left: 23px;
 }
 
 .btn--categories:hover {
@@ -433,7 +445,7 @@ img {
 /* popular-products */
 
 .popular-products {
-  margin-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 .section-title {
@@ -443,23 +455,24 @@ img {
 
   height: 89px;
   margin-bottom: 20px;
+  padding: 0 14px 0 28px;
   background-color: var(--beige);
 }
 
-.section-title h2 {
+.popular-products__title {
   font-size: 30px;
   line-height: 30px;
   color: var(--purple-blue);
   text-transform: uppercase;
   padding: 0;
-  margin: 0 0 0 28px;
+  margin: 0;
 }
 
 .btn--title {
   background-color: var(--basic-red);
   padding: 11px 0 9px 0;
   width: 192px;
-  margin: 0 14px 0 0;
+  margin: 0;
 }
 
 .btn--title:hover {
@@ -516,8 +529,7 @@ img {
   line-height: 20px;
   font-weight: 700;
   text-align: center;
-  margin-bottom: 7px;
-  margin-top: 0px;
+  margin: 0;
 }
 
 .product__item-price {
@@ -526,7 +538,6 @@ img {
   display: block;
   width: 141px;
   padding: 10px 0;
-  margin-top: 13px;
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -542,6 +553,8 @@ img {
   line-height: 18px;
   font-weight: 700;
   color: var(--gray-text-del);
+  padding-bottom: 13px;
+  padding-top: 7px;
 }
 
 /* Hover btn (buy, bookmarks) */
@@ -591,7 +604,7 @@ img {
 /* popular-producers */
 
 .popular-producers {
-  margin-bottom: 70px;
+  padding-bottom: 70px;
 }
 
 .producer__item:hover {
@@ -629,6 +642,7 @@ img {
 
 .service {
   background-color: var(--gray-light-blue);
+  padding-top: 64px;
 }
 
 .service > .container {
@@ -644,7 +658,7 @@ img {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
-  margin: 64px 0 25px 0;
+  margin: 0 0 25px 0;
 }
 
 .service__text {
@@ -676,7 +690,9 @@ img {
 }
 
 .service__item {
-  padding: 13.5px 0 17.5px 22px;
+  height: 61px;
+  box-sizing: border-box;
+  padding: 14px 0 0 22px;
 }
 
 .service__item--active {
@@ -690,6 +706,8 @@ img {
 
 .service__description {
   grid-column: 5 / 10;
+
+  padding-top: 70px;
 }
 
 .service__description-title {
@@ -697,7 +715,7 @@ img {
   line-height: 30px;
   text-transform: uppercase;
   color: var(--purple-blue);
-  margin: 70px 0 30px 0;
+  margin: 0 0 30px 0;
 }
 
 .service__description-text {
@@ -794,10 +812,6 @@ img {
 /* Catalog
 user */
 
-.header__user {
-  padding-top: 46px;
-}
-
 .header__user-name {
   font-size: 21px;
   line-height: 21px;
@@ -812,8 +826,12 @@ user */
 }
 
 .header__user-links {
+  display: flex;
+  justify-content: space-between;
+
   margin-top: 7px;
-  margin-left: 45px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 
 .header__user-link,
@@ -990,7 +1008,8 @@ filter */
 .product__list-sorted {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+  row-gap: 18px;
+  column-gap: 20px;
 
   padding: 0;
   margin: 0;
@@ -1100,13 +1119,14 @@ about_hammer-drill */
 
 .about-category {
   background-color: var(--basic-gray);
-  padding-top: 64px;
-  padding-bottom: 68px;
+  padding-top: 65px;
+  padding-bottom: 69px;
 }
 
 .about-category__title {
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   text-transform: uppercase;
   margin: 0 0 25px 0;
   padding: 0;
@@ -1207,6 +1227,7 @@ about_hammer-drill */
 .footer__copyright {
   justify-self: start;
   width: 240px;
+  margin: 0;
 }
 
 .footer__social {
@@ -1221,13 +1242,13 @@ about_hammer-drill */
 .footer__email {
   justify-self: end;
 
-  margin-right: 51px;
+  margin: 0 51px 0 0;
 }
 
 .footer__developer {
   justify-self: end;
 
-  margin-right: 10px;
+  margin: 0 10px 0 0;
 }
 
 .footer__social-link {
