@@ -94,23 +94,21 @@
               <a class="btn btn--categories" href="#">Для стройки</a>
             </li>
             <li class="categories__item-slider">
-              <div class="slider">
-                <div class="slide slide--hammer">
-                  <!-- <h3 class="slide__title">Перфораторы</h3> -->
-                  <!-- <p class="slide__text">Настоящие мужские игрушки!</p> -->
-                  <!-- <a class="btn btn--slider" href="catalog.html">Открыть каталог</a> -->
-                  <img src="img/hammer_drill.jpg" width="620" height="266" alt="Мужчина сверлит кирпичную стену дрелью">
-                </div>
-                <!-- <div class="slide slide--drill hidden">
-                  <h3 class="slide__title">Дрели</h3>
-                  <p class="slide__text">Соседям на радость!</p>
-                  <a class="btn btn--slider" href="catalog.html">Открыть каталог</a>
-                  <img src="img/drill.jpg" width="620" height="266" alt="Мужчина сверлит бетонную стену перфоратором">
-                </div>
-                <div class="slider-control">
-                  <button class="slider-control__btn" type="button">Первый слайд</button>
-                  <button class="slider-control__btn" type="button">Второй слайд</button>
-                </div> -->
+              <div class="slide slide--hammer slide-current">
+                <h3 class="slide__title">Перфораторы</h3>
+                <p class="slide__text">Настоящие мужские игрушки</p>
+                <a class="btn btn--slider" href="catalog.html">Открыть каталог</a>
+                <img src="img/hammer_drill.jpg" width="620" height="266" alt="Мужчина сверлит кирпичную стену дрелью">
+              </div>
+              <div class="slide slide--drill">
+                <h3 class="slide__title">Дрели</h3>
+                <p class="slide__text">Соседям на радость!</p>
+                <a class="btn btn--slider" href="catalog.html">Открыть каталог</a>
+                <img src="img/drill.jpg" width="620" height="266" alt="Мужчина сверлит бетонную стену перфоратором">
+              </div>
+              <div class="slider-control">
+                <button class="slider-control__btn" type="button" aria-label="Первый слайд"></button>
+                <button class="slider-control__btn slider-control__btn--current" type="button" aria-label="Второй слайд"></button>
               </div>
             </li>
             <li class="categories__item categories__item--sales">
@@ -137,9 +135,11 @@
                 <a class="btn btn--buy" href="#">Купить</a>
                 <a class="btn btn--bookmarks" href="#">В закладки</a>
               </div>
-              <h3 class="product__item-name">Перфоратор BOSCH BFG 9000</h3>
-              <del class="product__item-price--del">32500 Р.</del>
-              <a class="product__item-price" href="product.html">25500 Р.</a>
+              <div class="product__item-info">
+                <h3 class="product__item-name">Перфоратор BOSCH BFG 9000</h3>
+                <del class="product__item-price--del">32500 Р.</del>
+                <a class="product__item-price" href="product.html">25500 Р.</a>
+              </div>
             </li>
             <li class="product__item product__item--new">
               <img class="product__item-img" src="img/products/BOSCH-BFG-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
@@ -147,9 +147,11 @@
                 <a class="btn btn--buy" href="#">Купить</a>
                 <a class="btn btn--bookmarks" href="#">В закладки</a>
               </div>
-              <h3 class="product__item-name">Перфоратор BOSCH BFG 3000</h3>
-              <del class="product__item-price--del">22500 Р.</del>
-              <a class="product__item-price" href="product.html">15500 Р.</a>
+              <div class="product__item-info">
+                <h3 class="product__item-name">Перфоратор BOSCH BFG 3000</h3>
+                <del class="product__item-price--del">22500 Р.</del>
+                <a class="product__item-price" href="product.html">15500 Р.</a>
+              </div>
             </li>
             <li class="product__item">
               <img class="product__item-img" src="img/products/BOSCH-BFG-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
@@ -157,9 +159,11 @@
                 <a class="btn btn--buy" href="#">Купить</a>
                 <a class="btn btn--bookmarks" href="#">В закладки</a>
               </div>
-              <h3 class="product__item-name">Перфоратор BOSCH BFG 6000</h3>
-              <del class="product__item-price--del">30500 Р.</del>
-              <a class="product__item-price" href="product.html">25500 Р.</a>
+              <div class="product__item-info">
+                <h3 class="product__item-name">Перфоратор BOSCH BFG 6000</h3>
+                <del class="product__item-price--del">30500 Р.</del>
+                <a class="product__item-price" href="product.html">25500 Р.</a>
+              </div>
             </li>
             <li class="product__item product__item--new">
               <img class="product__item-img" src="img/products/BOSCH-BFG-9000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
@@ -167,9 +171,11 @@
                 <a class="btn btn--buy" href="#">Купить</a>
                 <a class="btn btn--bookmarks" href="#">В закладки</a>
               </div>
-              <h3 class="product__item-name">Перфоратор BOSCH BFG 2000</h3>
-              <del class="product__item-price--del">22500 Р.</del>
-              <a class="product__item-price" href="product.html">12500 Р.</a>
+              <div class="product__item-info">
+                <h3 class="product__item-name">Перфоратор BOSCH BFG 2000</h3>
+                <del class="product__item-price--del">22500 Р.</del>
+                <a class="product__item-price" href="product.html">12500 Р.</a>
+              </div>
             </li>
           </ul>
         </div>
@@ -241,14 +247,14 @@
             </li>
           </ul>
           <div class="service__description">
-            <article class="service__description-item">
+            <article class="service__description-item service__description-delivery service__description-item--current">
               <h3 class="service__description-title">Доставка</h3>
               <p class="service__description-text">Мы с удовольствием доставим ваш товар прямо<br>
                 к вашему подъезду совершенно бесплатно!<br>
                 Ведь мы неплохо заработаем,<br>
                 поднимая его на ваш этаж!</p>
             </article>
-            <article class="service__description-item hidden">
+            <article class="service__description-item service__description-guarantee">
               <h3 class="service__description-title">Гарантия</h3>
               <p class="service__description-text">Если купленный у нас товар поломается или заискрит,<br>
                 а также в случае пожара, спровоцированного его<br>
@@ -256,7 +262,7 @@
                 гарантии. Мы обменяем сгоревший товар на новый.<br>
                 Дом уж восстановите как-нибудь сами.</p>
             </article>
-            <article class="service__description-item hidden">
+            <article class="service__description-item service__description-credit">
               <h3 class="service__description-title">Кредит</h3>
               <p class="service__description-text">Залезть в долговую яму стало проще!<br>
                 Кредитные консультанты придут вам на помощь.</p>
@@ -299,7 +305,7 @@
     <footer class="footer">
       <div class="footer__top">
         <div class="container">
-          <a class="footer__logo logo" href="index.html" href="#">ТЕХНОМАРТ</a>
+          <a class="footer__logo logo" href="index.html">ТЕХНОМАРТ</a>
           <ul class="footer__nav footer__nav--top">
             <li class="footer__nav-item">
               <a class="footer__nav-link" href="#">Компания</a>
