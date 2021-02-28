@@ -163,6 +163,10 @@ img {
 
 /* Header search form */
 
+.header__search {
+  position: relative;
+}
+
 .header__search-input {
   width: 270px;
   height: 42px;
@@ -172,26 +176,42 @@ img {
   padding-left: 42px;
   background-color: var(--night-blue);
   border: none;
-  background-image: url(../img/icon/icon-search.svg);
-  background-repeat: no-repeat;
-  background-position: 17px 12px;
 }
 
 .header__search-input::placeholder {
   font-size: 18px;
-  line-height: 24px;
   color: var(--basic-white);
-}
-
-.header__search-input:hover {
-  background-image: url(../img/icon/icon-search--hover.svg);
+  opacity: 1;
 }
 
 .header__search-input:focus {
   color: var(--basic-black);
   background-color: var(--basic-white);
-  background-image: url(../img/icon/icon-search--active.svg);
   outline:none;
+}
+
+.header__search-btn {
+  display: inline-block;
+  position: absolute;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  top: 12px;
+  left: 17px;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  background-image: url("../img/icon/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.header__search-input:hover ~ .header__search-btn {
+  background-image: url("../img/icon/icon-search--hover.svg");
+}
+
+.header__search-input:focus ~ .header__search-btn {
+  background-image: url("../img/icon/icon-search--active.svg");
 }
 
 /* Header__top links */
@@ -599,7 +619,7 @@ img {
   position: absolute;
   bottom: 36px;
   left: 295px;
-  z-index: 20;
+  z-index: 1;
   display: flex;
   width: 30px;
   justify-content: space-between;
@@ -821,6 +841,10 @@ img {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
 
+.producer__item:active {
+  opacity: 0.3;
+}
+
 .producer__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -924,6 +948,10 @@ img {
 
 .service__item:last-child {
   margin-bottom: 0;
+}
+
+.service__item:not(.service__item--active):hover {
+  background-color: #293449;
 }
 
 .service__item--active {
@@ -1409,12 +1437,22 @@ filter */
   background-image: url("../img/icon/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.7;
 }
 
 .filter__input-checkbox:checked + .filter__label::before {
   width: 27px;
   height: 23px;
   background-image: url("../img/icon/checkbox-on.svg");
+  opacity: 0.7;
+}
+
+.filter__input-checkbox:hover + .filter__label::before {
+  opacity: 1;
+}
+
+.filter__input-checkbox:checked:hover + .filter__label::before {
+  opacity: 1;
 }
 
 .filter__input-radio + .filter__label::before {
@@ -1425,8 +1463,9 @@ filter */
   box-sizing: border-box;
   width: 25px;
   height: 25px;
-  border: 3px solid #C5C5C5;
+  border: 3px solid #B5B5B5;
   border-radius: 50%;
+  opacity: 0.7;
 }
 
 .filter__input-radio:checked + .filter__label::after {
@@ -1436,8 +1475,17 @@ filter */
   top: 5px;
   width: 9px;
   height: 9px;
-  background-color: #C5C5C5;
+  background-color: #B5B5B5;
   border-radius: 50%;
+  opacity: 0.7;
+}
+
+.filter__input-radio:hover + .filter__label::before {
+  opacity: 1;
+}
+
+.filter__input-radio:hover + .filter__label::after {
+  opacity: 1;
 }
 
 .btn--filter {
@@ -1519,19 +1567,17 @@ sort */
   list-style: none;
   text-decoration: none;
   border-bottom: 1px dotted var(--basic-red);
-  color: var(--basic-black);
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .catalog__sort-link:hover {
   border-bottom-style: solid;
-  opacity: 1;
+  color: rgba(0, 0, 0, 1);
 }
 
 .catalog__sort-link--current {
   border-bottom: none;
   color: var(--basic-red);
-  opacity: 1;
   pointer-events: none;
 }
 
@@ -1804,4 +1850,56 @@ about_hammer-drill */
 .footer__email-link:active,
 .footer__developer-link:active {
   color: var(--basic-red);
+}
+
+/* Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.5));
+}
+
+.modal-show {
+  display: block;
+}
+
+.modal::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 7px;
+  background-color: var(--basic-red);
+}
+
+.modal-map {
+
+  width: 943px;
+  height: 449px;
+}
+
+.modal-map iframe {
+  border: none;
+}
+
+.modal__btn-close {
+  position: absolute;
+  top: 0;
+  right: -25px;
+  width: 21px;
+  height: 21px;
+  background-color: transparent;
+  background-image: url(../img/icon/icon-close.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  border: 0;
+  cursor: pointer;
 }
