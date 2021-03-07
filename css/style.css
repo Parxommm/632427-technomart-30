@@ -1135,6 +1135,7 @@ img {
   display: block;
   margin-top: 34px;
   margin-bottom: 20px;
+  background-color: var(--beige);
 }
 
 .btn--write-to-us {
@@ -1487,6 +1488,14 @@ filter */
   opacity: 1;
 }
 
+.filter__input-checkbox:disabled + .filter__label::before,
+.filter__input-checkbox:disabled:hover + .filter__label::before,
+.filter__input-checkbox:disabled:focus + .filter__label::before,
+.filter__input-checkbox:disabled + .filter__label {
+  opacity: 0.5;
+  cursor: auto;
+}
+
 .filter__input-radio + .filter__label::before {
   content: "";
   position: absolute;
@@ -1520,6 +1529,17 @@ filter */
 .filter__input-radio:hover + .filter__label::after
 .filter__input-radio:focus + .filter__label::after {
   opacity: 1;
+}
+
+.filter__input-radio:disabled + .filter__label::before,
+.filter__input-radio:disabled:hover + .filter__label::before,
+.filter__input-radio:disabled:focus + .filter__label::before,
+.filter__input-radio:disabled + .filter__label::after,
+.filter__input-radio:disabled:hover + .filter__label::after,
+.filter__input-radio:disabled:focus + .filter__label::after,
+.filter__input-radio:disabled + .filter__label {
+  opacity: 0.5;
+  cursor: auto;
 }
 
 .btn--filter {

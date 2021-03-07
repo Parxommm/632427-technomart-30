@@ -19,7 +19,8 @@
         <div class="container">
           <a class="header__logo logo" href="index.html">ТЕХНОМАРТ</a>
           <form class="header__search" action="#" method="POST">
-            <input class="header__search-input" type="search" placeholder="Поиск:">
+            <input class="header__search-input" type="search" placeholder="Поиск:" id="search-input">
+            <label class="header__search-label" for="search-input" aria-label="Поиск"></label>
             <button class="header__search-btn"></button>
           </form>
           <div class="header__top-links">
@@ -38,7 +39,7 @@
               и инструментов для ремонта
             </h1>
             <div class="header__contacts">
-              <a class="header__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+              <a class="header__phone" href="tel:+78125550555" aria-label="Позвонить в Техномарт">+7 (812) 555-05-55</a>
               <p class="header__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
             </div>
             <div class="header__user">
@@ -88,7 +89,7 @@
       <div class="container">
         <ul class="breadcrumbs">
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="index.html"></a>
+            <a class="breadcrumbs__link" href="index.html" aria-label="На главную"></a>
           </li>
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
@@ -189,10 +190,10 @@
             </ul>
             <ul class="catalog__sort-list catalog__sort-list--up-down">
               <li class="catalog__sort-item">
-                <a class="catalog__sort-link catalog__sort-link--up catalog__sort-link--current" href="#"></a>
+                <a class="catalog__sort-link catalog__sort-link--up catalog__sort-link--current" href="#" aria-label="Сортировать по возрастанию"></a>
               </li>
               <li class="catalog__sort-item">
-                <a class="catalog__sort-link catalog__sort-link--down" href="#"></a>
+                <a class="catalog__sort-link catalog__sort-link--down" href="#" aria-label="Сортировать по убыванию"></a>
               </li>
             </ul>
           </div>
@@ -356,7 +357,7 @@
             </li>
           </ul>
           <p class="footer__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-          <a class="footer__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <a class="footer__phone" href="tel:+78125550555" aria-label="Позвонить в Техномарт">+7 (812) 555-05-55</a>
           <ul class="footer__nav footer__nav--bottom">
             <li class="footer__nav-item">
               <a class="footer__nav-link" href="#">Материалы</a>
