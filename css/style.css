@@ -160,7 +160,7 @@ img {
   bottom: -5px;
   width: 220px;
   height: 5px;
-  background-color: var(--basic-red);
+  background-color: #B52933;
 }
 
 /* Header search form */
@@ -582,16 +582,19 @@ img {
   display: block;
 }
 
+.slide__info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 24px;
+}
+
 .slide__title {
   font-size: 36px;
   line-height: 36px;
   text-transform: uppercase;
   color: var(--basic-white);
   margin: 0;
-
-  position: absolute;
-  top: 23px;
-  left: 24px;
 }
 
 .slide__text {
@@ -599,10 +602,7 @@ img {
   line-height: 24px;
   color: var(--basic-white);
   margin: 0;
-
-  position: absolute;
-  top: 65px;
-  left: 24px;
+  margin-top: 5px;
 }
 
 .btn--slider {
@@ -675,7 +675,8 @@ img {
 
 .btn--title {
   background-color: var(--basic-red);
-  width: 192px;
+  min-width: 192px;
+  max-width: 250px;
   margin: 0;
 }
 
@@ -700,7 +701,7 @@ img {
 .product__item {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 
   width: 220px;
@@ -722,18 +723,16 @@ img {
 }
 
 .product__item-img {
+  width: 218px;
+  height: 170px;
+}
+
+.product__item-img img {
   object-fit: scale-down;
 }
 
-.product__item-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  min-height: 146px;
-  box-sizing: border-box;
-  padding: 8px 20px 20px 20px;
-  text-align: center;
+.product__item-link {
+  color: var(--basic-black);
 }
 
 .product__item-name {
@@ -743,6 +742,13 @@ img {
   font-weight: 700;
   text-align: center;
   margin: 0;
+  margin-top: 8px;
+  padding: 0 20px;
+}
+
+.product__item-prices {
+  text-align: center;
+  padding: 10px 20px 20px;
 }
 
 .product__item-price {
@@ -753,7 +759,8 @@ img {
   width: 140px;
   height: 38px;
   padding: 10px 30px 10px 20px;
-  margin-left: 25px;
+  margin-left: 15px;
+  margin-top: 10px;
   font-family: "PT Sans", Arial Narrow, sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -804,8 +811,10 @@ img {
 .product__item-hover {
   display: none;
   text-align: center;
-  margin-top: 38px;
-  margin-bottom: auto;
+  width: 218px;
+  height: 170px;
+  box-sizing: border-box;
+  padding-top: 36px;
 }
 
 .btn--buy {
@@ -960,6 +969,9 @@ img {
 }
 
 .service__item-link {
+  display: block;
+  box-sizing: border-box;
+  padding: 15px 22px 16px;
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
@@ -967,9 +979,6 @@ img {
 }
 
 .service__item {
-  height: 61px;
-  box-sizing: border-box;
-  padding: 14px 0 0 22px;
   margin-bottom: 1px;
   box-shadow: 0px 1px 0px var(--night-blue),
         inset 0px 1px 0px #405069;
@@ -1034,7 +1043,7 @@ img {
   font-weight: 400;
   text-transform: uppercase;
   color: var(--purple-blue);
-  margin: 0 0 30px 0;
+  margin: 0 0 28px 0;
 }
 
 .service__description-text {
@@ -1139,10 +1148,10 @@ img {
 }
 
 .btn--write-to-us {
+  display: block;
   background-color: var(--basic-red);
   box-sizing: border-box;
   padding: 10px;
-  width: 300px;
 }
 
 .btn--write-to-us:hover {
@@ -1287,6 +1296,15 @@ Breadcrumbs */
   line-height: 18px;
   color: var(--basic-black);
   text-transform: uppercase;
+}
+
+.breadcrumbs__link:hover {
+  opacity: 0.5;
+}
+
+.breadcrumbs__item--current > .breadcrumbs__link{
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 /* catalog
@@ -1554,6 +1572,15 @@ filter */
   cursor: pointer;
 }
 
+.btn--filter:hover {
+  border-color: var(--basic-greylight);
+}
+
+.btn--filter:active {
+  color: var(--basic-greylight);
+  outline: none;
+}
+
 /* Catalog */
 
 .catalog {
@@ -1700,13 +1727,18 @@ pagination*/
   box-sizing: border-box;
   text-align: center;
   padding: 9px 10px;
-  border: 1px solid var(--basic-black);
+  border: 1px solid #E5E5E5;
   border-radius: 2px;
   color: var(--basic-black);
 }
 
+
 .pagination__item--next-page > .pagination__item-link {
   min-width: 140px;
+}
+
+.pagination__item-link:hover {
+  border-color: var(--basic-greylight);
 }
 
 .pagination__item-link:active {
@@ -2051,7 +2083,7 @@ about_hammer-drill */
 .modal--cart {
   background-color: white;
   width: 620px;
-  height: min-content;
+  height: 282px;
 }
 
 .modal__text {
