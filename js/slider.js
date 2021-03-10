@@ -1,23 +1,57 @@
-// Не совсем правильно, но просто для себя
-// попробовал сделать таким способом
+// Slider
 
-const btn1 = document.querySelector(".slider-control__btn--1");
-const btn2 = document.querySelector(".slider-control__btn--2");
-const slideHammer = document.querySelector(".slide--hammer");
-const slideDrill = document.querySelector(".slide--drill");
+const next = document.querySelector(".slide__next");
+const prev = document.querySelector(".slide__prev");
+const dots = document.querySelectorAll(".slider__dot");
+const slides = document.querySelectorAll(".slide");
 
-btn1.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  slideHammer.classList.toggle("slide-current");
-  slideDrill.classList.toggle("slide-current");
-  btn1.classList.toggle("slider-control__btn--current");
-  btn2.classList.toggle("slider-control__btn--current");
-});
+let index = 0;
 
-btn2.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  slideHammer.classList.toggle("slide-current");
-  slideDrill.classList.toggle("slide-current");
-  btn1.classList.toggle("slider-control__btn--current");
-  btn2.classList.toggle("slider-control__btn--current");
-});
+const currentSlide = n => {
+  for(slide of slides) {
+    slide.classList.remove("slide--current");
+  }
+  slides[n].classList.add("slide--current")
+}
+
+const currentDot = n => {
+  for(dot of dots) {
+    dot.classList.remove("slider__dot--current");
+  }
+  dots[n].classList.add("slider__dot--current")
+}
+
+const prepareCurrentSlide = ind => {
+  currentSlide(ind);
+  currentDot(ind);
+}
+
+const nextSlide = () => {
+  if(index == slides.length - 1) {
+    index = 0;
+    prepareCurrentSlide(index);
+  } else {
+    index++;
+    prepareCurrentSlide(index);
+  }
+}
+
+const prevSlide = () => {
+  if(index == 0) {
+    index = slides.length - 1;
+    prepareCurrentSlide(index);
+  } else {
+    index--;
+    prepareCurrentSlide(index);
+  }
+}
+
+dots.forEach((item, indexDot) => {
+  item.addEventListener("click", () => {
+    index = indexDot;
+    prepareCurrentSlide(index);
+  })
+})
+
+next.addEventListener("click", nextSlide);
+prev.addEventListener("click", prevSlide);
