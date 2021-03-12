@@ -56,16 +56,22 @@
   --basic-white_50: rgba(255, 255, 255, 0.5);
   --basic-white_30: rgba(255, 255, 255, 0.3);
   --basic-red: #EE3643;
+  --basic-red--hover: #CA2C37;
+  --basic-red--active: #BA2732;
   --basic-green: #63A63E;
   --basic-greylight: #C5C5C5;
   --basic-greylight_30: rgba(197, 197, 197, 0.3);
+  --logo-bottom: #B52933;
   --success: #5FBB2D;
+  --btn-buy: #367315;
+  --btn-buy--active: #518534;
   --basic-gray:#F2F6F8;
+  --light-grey: #EAEAEA;
   --shiny_orange: #FFBF47;
   --night-blue: #293449;
   --purple-blue: #32425C;
   --twitter-color: #3BBCE3;
-  --ligh-plum: #DC91D8;
+  --light-plum: #DC91D8;
   --light-green: #8ED78F;
   --beige: #F9F5F0;
   --gray-light-blue: #f1f5f7;
@@ -160,7 +166,7 @@ img {
   bottom: -5px;
   width: 220px;
   height: 5px;
-  background-color: #B52933;
+  background-color: var(--logo-bottom);
 }
 
 /* Header search form */
@@ -334,7 +340,7 @@ img {
   line-height: 30px;
   font-weight: 700;
   color: var(--basic-red);
-  border: 3px solid #FFFFFF;
+  border: 3px solid var(--basic-white);
   padding: 4px 42px 5px 71px;
   position: relative;
 }
@@ -496,7 +502,7 @@ img {
 }
 
 .categories__item--technich {
-  background-color: var(--ligh-plum);
+  background-color: var(--light-plum);
   background-image: url(../img/icon/icon-3.svg);
   background-repeat: no-repeat;
   background-position: 191px 31px;
@@ -614,11 +620,11 @@ img {
 }
 
 .btn--slider:hover {
-  background-color: #CA2C37;
+  background-color: var(--basic-red--hover);
 }
 
 .btn--slider:active {
-  background-color: #BA2732;
+  background-color: var(--basic-red--active);
 }
 
 .slider__dots {
@@ -636,7 +642,7 @@ img {
   width: 10px;
   height: 10px;
   background-color: var(--basic-white);
-  border: 2px solid #ffffff;
+  border: 2px solid var(--basic-white);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -679,11 +685,11 @@ img {
 }
 
 .btn--title:hover {
-  background-color: #CA2C37;
+  background-color: var(--basic-red--hover);
 }
 
 .btn--title:active {
-  background-color: #BA2732;
+  background-color: var(--basic-red--active);
 }
 
 .product__list {
@@ -705,7 +711,7 @@ img {
   width: 220px;
   min-height: 318px;
   box-sizing: border-box;
-  border: 1px solid #EAEAEA;
+  border: 1px solid var(--light-grey);
 }
 
 .product__item:hover {
@@ -822,7 +828,7 @@ img {
   padding-left: 20px;
   margin-bottom: 10px;
   background-color: var(--basic-green);
-  box-shadow: inset 0px -3px 0px #367315;
+  box-shadow: inset 0px -3px 0px var(--btn-buy);
   position: relative;
 }
 
@@ -835,7 +841,7 @@ img {
 }
 
 .btn--buy:active {
-  background-color: #518534;
+  background-color: var(--btn-buy--active);
 }
 
 .btn--buy::before {
@@ -856,7 +862,7 @@ img {
   box-sizing: border-box;
   padding: 7px 10px;
   color: var(--purple-blue);
-  border: 3px solid #63A63E;
+  border: 3px solid var(--basic-green);
 }
 
 .btn--bookmarks:hover {
@@ -901,7 +907,7 @@ img {
   width: 220px;
   height: 145px;
   box-sizing: border-box;
-  border: 1px solid #EAEAEA;
+  border: 1px solid var(--light-grey);
 }
 
 .producer__item-logo {
@@ -1047,11 +1053,11 @@ img {
 }
 
 .btn--credit:hover {
-  background-color: #CA2C37;
+  background-color: var(--basic-red--hover);
 }
 
 .btn--credit:active {
-  background-color: #BA2732;
+  background-color: var(--basic-red--active);
 }
 
 /* Company */
@@ -1119,11 +1125,11 @@ img {
 }
 
 .btn--about-company:hover {
-  background-color: #CA2C37;
+  background-color: var(--basic-red--hover);
 }
 
 .btn--about-company:active {
-  background-color: #BA2732;
+  background-color: var(--basic-red--active);
 }
 
 .company__contacts-link {
@@ -1141,11 +1147,11 @@ img {
 }
 
 .btn--write-to-us:hover {
-  background-color: #CA2C37;
+  background-color: var(--basic-red--hover);
 }
 
 .btn--write-to-us:active {
-  background-color: #BA2732;
+  background-color: var(--basic-red--active);
 }
 
 /* Catalog
@@ -1332,7 +1338,7 @@ filter */
   margin: 0;
   margin-bottom: 14px;
   padding: 10px 0 10px 18px;
-  background-color: #F7F3EC;
+  background-color: var(--beige);
   border-radius: 3px;
 }
 
@@ -1383,7 +1389,7 @@ filter */
   box-sizing: border-box;
   padding: 39px 20px 0;
   margin-bottom: 9px;
-  background-color: #F7F3EC;
+  background-color: var(--beige);
   border-radius: 4px;
 }
 
@@ -1405,7 +1411,7 @@ filter */
   width: 4px;
   height: 4px;
   padding: 0;
-  border: 8px solid #ffffff;
+  border: 8px solid var(--basic-white);
   background-color: #ababab;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 #cfcfcf;
@@ -1431,7 +1437,7 @@ filter */
 .filter__input-price {
   width: 95px;
   height: 38px;
-  background-color: #F7F3EC;
+  background-color: var(--beige);
   text-align: center;
   padding: 0;
   border: none;
@@ -1508,9 +1514,8 @@ filter */
   box-sizing: border-box;
   width: 25px;
   height: 25px;
-  border: 3px solid #B5B5B5;
+  border: 3px solid var(--basic-greylight);
   border-radius: 50%;
-  opacity: 0.7;
 }
 
 .filter__input-radio:checked + .filter__label::after {
@@ -1520,19 +1525,18 @@ filter */
   top: 5px;
   width: 9px;
   height: 9px;
-  background-color: #B5B5B5;
+  background-color: var(--basic-greylight);
   border-radius: 50%;
-  opacity: 0.7;
 }
 
 .filter__input-radio:hover + .filter__label::before,
 .filter__input-radio:focus + .filter__label::before {
-  opacity: 1;
+  border-color: #b5b5b5;
 }
 
-.filter__input-radio:hover + .filter__label::after
+.filter__input-radio:hover + .filter__label::after,
 .filter__input-radio:focus + .filter__label::after {
-  opacity: 1;
+  background-color: #b5b5b5;
 }
 
 .filter__input-radio:disabled + .filter__label::before,
@@ -1594,7 +1598,7 @@ sort */
   font-family: "PT Sans", Arial Narrow, sans-serif;
   font-size: 13px;
   line-height: 18px;
-  background-color: #F7F3EC;
+  background-color: var(--beige);
   text-transform: uppercase;
   height: 38px;
   margin-bottom: 28px;
@@ -2023,7 +2027,7 @@ about_hammer-drill */
   width: 100%;
   font: inherit;
   background-color: transparent;
-  border: 2px solid #C5C5C5;
+  border: 2px solid var(--basic-greylight);
   box-sizing: border-box;
 }
 
@@ -2052,11 +2056,11 @@ about_hammer-drill */
 }
 
 .modal__btn:hover {
-  background-color: #CA2C37;
+  background-color: var(--basic-red--hover);
 }
 
 .modal__btn:active {
-  background-color: #BA2732;
+  background-color: var(--basic-red--active);
 }
 
 .modal--form > .modal__btn-close {

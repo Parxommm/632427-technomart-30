@@ -1,4 +1,3 @@
-// Slider
 
 const next = document.querySelector(".slide__next");
 const prev = document.querySelector(".slide__prev");
@@ -11,14 +10,14 @@ const currentSlide = n => {
   for(slide of slides) {
     slide.classList.remove("slide--current");
   }
-  slides[n].classList.add("slide--current")
+  slides[n].classList.add("slide--current");
 }
 
 const currentDot = n => {
   for(dot of dots) {
     dot.classList.remove("slider__dot--current");
   }
-  dots[n].classList.add("slider__dot--current")
+  dots[n].classList.add("slider__dot--current");
 }
 
 const prepareCurrentSlide = ind => {
