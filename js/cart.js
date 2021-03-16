@@ -1,7 +1,13 @@
 const cartPopup = document.querySelector(".modal--cart");
 const cartClose = cartPopup.querySelector(".modal__btn-close");
+const continueShopping = cartPopup.querySelector(".btn--continue-shopping");
 
 cartClose.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  cartPopup.classList.remove("modal-show");
+});
+
+continueShopping.addEventListener("click", function (evt) {
   evt.preventDefault();
   cartPopup.classList.remove("modal-show");
 });

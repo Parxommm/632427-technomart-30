@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" href="img/favicon/152.png">
     <link rel="manifest" href="manifest.webmanifest">
 
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
 
@@ -18,7 +18,7 @@
       <div class="header__top">
         <div class="container">
           <a class="header__logo logo" href="index.html">ТЕХНОМАРТ</a>
-          <form class="header__search" action="#" method="POST">
+          <form class="header__search" method="GET" action="https://echo.htmlacademy.ru">
             <input class="header__search-input" type="search" id="search-input" placeholder="Поиск:">
             <label class="header__search-label" for="search-input" aria-label="Поиск"></label>
             <button class="header__search-btn"></button>
@@ -108,7 +108,7 @@
           <section class="filters">
             <h3 class="filters__title visually-hidden">Фильтр товаров</h3>
             <p class="filters__text">Фильтр:</p>
-            <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+            <form class="filter" method="GET" action="https://echo.htmlacademy.ru">
               <fieldset class="filter__group filter__group--price">
                 <legend class="filter__group-name filter__group-name--price">Цена:</legend>
                 <div class="filter__price-range">
@@ -382,11 +382,9 @@
       <section class="about-category">
         <div class="container">
           <h2 class="about-category__title">ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
-          <p class="about-category__text">
-            Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
-            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br>
-            В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
-          </p>
+          <p class="about-category__text">Перфоратор – универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.</p>
+          <p class="about-category__text">Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.</p>
+          <p class="about-category__text">В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
       </div>
       </section>
     </main>
@@ -457,7 +455,7 @@
             <a class="footer__email-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
           <p class="footer__developer">
-            Разработано —<br>
+            Разработано –<br>
             <a class="footer__developer-link" href="htmlacademy.ru">htmlacademy.ru</a>
           </p>
         </div>
@@ -468,8 +466,8 @@
       <h2 class="modal__title visually-hidden">Добавление товара в корзину</h2>
       <p class="modal__text">Товар добавлен в корзину!</p>
       <div class="modal__btn-area">
-        <button class="btn modal__btn" type="button">Оформить заказ</button>
-        <button class="btn modal__btn" type="button">Продолжить покупки</button>
+        <a class="btn modal__btn" href="#">Оформить заказ</a>
+        <button class="btn modal__btn btn--continue-shopping" type="button">Продолжить покупки</button>
       </div>
       <button class="modal__btn-close" type="button" aria-label="Закрыть"></button>
     </section>

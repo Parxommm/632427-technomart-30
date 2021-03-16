@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" href="img/favicon/152.png">
     <link rel="manifest" href="manifest.webmanifest">
 
-    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
   </head>
 
@@ -17,8 +17,8 @@
     <header class="header">
       <div class="header__top">
         <div class="container">
-          <a class="header__logo logo" href="">ТЕХНОМАРТ</a>
-          <form class="header__search" action="#" method="POST">
+          <a class="header__logo logo">ТЕХНОМАРТ</a>
+          <form class="header__search" method="GET" action="https://echo.htmlacademy.ru">
             <input class="header__search-input" type="search" id="search-input" placeholder="Поиск:">
             <label class="header__search-label" for="search-input" aria-label="Поиск"></label>
             <button class="header__search-btn"></button>
@@ -139,7 +139,7 @@
           <ul class="product__list">
             <li class="product__item">
               <div class="product__item-info">
-                <div class="product__item-img">
+                <div class="product__item-img product__item-img--1">
                   <img src="img/products/bosch-bgf-9000.jpg" width="218" height="170" alt="Фото товара">
                 </div>
                 <div class="product__item-hover">
@@ -265,8 +265,7 @@
       <section class="service">
         <div class="container">
           <h2 class="service__title">Сервисы</h2>
-          <p class="service__text">Хороший интернет-магазин отличается от плохого не только ценами!<br>
-            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+          <p class="service__text">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           <ul class="service__list">
             <li class="service__item">
               <a class="service__item-link service__item-link--active" data-tab="#tab_1" href="#">Доставка</a>
@@ -282,8 +281,8 @@
             <article class="service__description-item service__description-delivery service__description-item--current" id="tab_1">
               <h3 class="service__description-title">Доставка</h3>
               <p class="service__description-text">Мы с удовольствием доставим ваш товар прямо<br>
-                к вашему подъезду совершенно бесплатно!<br>
-                Ведь мы неплохо заработаем,<br>
+                к вашему подъезду совершенно бесплатно!</p>
+              <p class="service__description-text">Ведь мы неплохо заработаем,<br>
                 поднимая его на ваш этаж!</p>
             </article>
             <article class="service__description-item service__description-guarantee" id="tab_2">
@@ -309,11 +308,9 @@
             <h2 class="company__about-title">КОМПАНИЯ «Техномарт»</h2>
             <p class="company__about-text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br>
               ремонта и строительства не оставит равнодушными любителей сэкономить на<br>
-              гастарбайтерах.<br>
-              <br>
-              Мы можем доставить ваш товар в самые отдаленные точки России! <br>
-              Техномарт работает со многими транспортными компаниями:
-            </p>
+              гастарбайтерах.</p>
+            <p class="company__about-text">Мы можем доставить ваш товар в самые отдаленные точки России!</p>
+            <p class="company__about-text">Техномарт работает со многими транспортными компаниями:</p>
             <ul class="company__partner-list">
               <li class="partner-list__item">Деловые линии</li>
               <li class="partner-list__item">Автотрейдинг</li>
@@ -400,7 +397,7 @@
             <a class="footer__email-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </p>
           <p class="footer__developer">
-            Разработано —<br>
+            Разработано –<br>
             <a class="footer__developer-link" href="htmlacademy.ru">htmlacademy.ru</a>
           </p>
         </div>
@@ -439,8 +436,8 @@
       <h2 class="modal__title visually-hidden">Добавление товара в корзину</h2>
       <p class="modal__text">Товар добавлен в корзину!</p>
       <div class="modal__btn-area">
-        <button class="btn modal__btn" type="button">Оформить заказ</button>
-        <button class="btn modal__btn" type="button">Продолжить покупки</button>
+        <a class="btn modal__btn" href="#">Оформить заказ</a>
+        <button class="btn modal__btn btn--continue-shopping" type="button">Продолжить покупки</button>
       </div>
       <button class="modal__btn-close" type="button" aria-label="Закрыть"></button>
     </section>
